@@ -1,8 +1,8 @@
-#include <header.h>
+#include <headerB.h>
 
 int main()
 {
-    doStuff();
+    doStuffB();
 
     return 0;
 }
