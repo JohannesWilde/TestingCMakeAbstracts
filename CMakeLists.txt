@@ -18,7 +18,7 @@ add_executable(TestingCMakeR0
 target_link_libraries(TestingCMakeR0
     PRIVATE b
     PRIVATE r0
-    # PRIVATE b  # <- this would fail with "undefined reference to 'doStuff()'
+    # PRIVATE b  # <- this would fail with "undefined reference to 'doStuff()'"
 )
 
 
@@ -29,6 +29,6 @@ add_executable(TestingCMakeR1
 target_link_libraries(TestingCMakeR1
     PRIVATE b
     PRIVATE r1
-    # PRIVATE b  # <- this would fail with "undefined reference to 'doStuff()'
+    # PRIVATE b  # <- this would fail with "undefined reference to 'doStuff()'"
 )
 

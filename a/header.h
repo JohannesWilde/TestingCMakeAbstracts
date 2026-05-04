@@ -1,6 +1,6 @@
 #ifndef HEADER_H
 #define HEADER_H
 
-void doStuff();
+extern void doStuff();
 
 #endif // HEADER_H
