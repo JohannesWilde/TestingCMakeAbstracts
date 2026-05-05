@@ -16,9 +16,11 @@ add_executable(TestingCMakeR0
 )
 
 target_link_libraries(TestingCMakeR0
-    PRIVATE b
-    PRIVATE r0
-    # PRIVATE b  # <- this would fail with "undefined reference to 'doStuff()'"
+    PRIVATE
+        -Wl,--start-group
+        r0
+        b  # <- this would fail with "undefined reference to 'doStuff()'"
+        -Wl,--end-group
 )
 
 
