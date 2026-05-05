@@ -15,6 +15,14 @@ add_executable(TestingCMakeR0
     main.cpp
 )
 
+# https://linux.die.net/man/1/ld
+# --start-group archives --end-group
+#     The archives should be a list of archive files. They may be either explicit file names, or -l options.
+
+#     The specified archives are searched repeatedly until no new undefined references are created. Normally, an archive is searched only once in the order that it is specified on the command line. If a symbol in that archive is needed to resolve an undefined symbol referred to by an object in an archive that appears later on the command line, the linker would not be able to resolve that reference. By grouping the archives, they all be searched repeatedly until all possible references are resolved.
+
+#     Using this option has a significant performance cost. It is best to use it only when there are unavoidable circular references between two or more archives.
+
 target_link_libraries(TestingCMakeR0
     PRIVATE
         -Wl,--start-group
